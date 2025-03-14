@@ -83,8 +83,7 @@ namespace SistemaControlePonto
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            Cadastrar cadastrar = new Cadastrar();
-            cadastrar.Show();
+
         }
 
         private void páginaInicialToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +95,12 @@ namespace SistemaControlePonto
         {
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Cadastrar cadastrar = new Cadastrar();
+            cadastrar.Show();
         }
     }
 }

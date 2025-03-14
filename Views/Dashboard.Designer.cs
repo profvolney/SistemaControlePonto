@@ -48,6 +48,7 @@
             Controls.Add(cboFrutas);
             Name = "Dashboard";
             Text = "Dashboard";
+            Load += Dashboard_Load;
             ResumeLayout(false);
         }
 

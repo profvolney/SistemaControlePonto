@@ -7,39 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.Utils;
 
 namespace SistemaControlePonto.Views
 {
-    public partial class Dashboard: Form
+    public partial class Dashboard : BunifuForm
     {
         public Dashboard()
         {
             InitializeComponent();
             MostrarFrutasCombo();
-        }        
-    public void MostrarFrutasCombo()
-    {
+        }
+        public void MostrarFrutasCombo()
+        {
             var frutas = new List<string> { "Limão", "Pêra", "Maçã" };
-            
+
             frutas.Add("Morango");
             frutas.Add("Abacate");
             frutas.Add("Laranja");
             frutas.Add("Goiaba");
-            frutas.Add("Uva");          
+            frutas.Add("Uva");
 
-        foreach (var item in frutas)
-        {
-            
-            MessageBox.Show($"O nome das frutas são...{frutas.ToString()}");
-            
-            BindingSource source = new BindingSource();
+            foreach (var item in frutas)
+            {
+
+                MessageBox.Show($"O nome das frutas são...{frutas.ToString()}");
+
+                BindingSource source = new BindingSource();
                 source.DataSource = frutas;
                 cboFrutas.DataSource = source.DataSource;
+            }
+
+
         }
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
 
-    }
-
+        }
     };
 
 

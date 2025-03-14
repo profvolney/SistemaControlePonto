@@ -146,7 +146,7 @@
             panel1 = new Panel();
             button4 = new Button();
             panel2 = new Panel();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            btnCadastrar = new Button();
             button5 = new Button();
             panel3 = new Panel();
             dataGridView1 = new DataGridView();
@@ -232,7 +232,7 @@
             button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(3, 6);
             button1.Name = "button1";
-            button1.Size = new Size(194, 38);
+            button1.Size = new Size(192, 31);
             button1.TabIndex = 3;
             button1.Text = "Exibir";
             button1.UseVisualStyleBackColor = false;
@@ -244,9 +244,9 @@
             button2.ForeColor = Color.White;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(3, 50);
+            button2.Location = new Point(3, 49);
             button2.Name = "button2";
-            button2.Size = new Size(194, 38);
+            button2.Size = new Size(192, 31);
             button2.TabIndex = 4;
             button2.Text = "Atualizar";
             button2.UseVisualStyleBackColor = false;
@@ -942,7 +942,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Black;
-            panel2.Controls.Add(materialButton1);
+            panel2.Controls.Add(btnCadastrar);
             panel2.Controls.Add(button5);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(button2);
@@ -952,30 +952,19 @@
             panel2.Size = new Size(200, 630);
             panel2.TabIndex = 8;
             // 
-            // materialButton1
+            // btnCadastrar
             // 
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.BackColor = Color.Transparent;
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(13, 149);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(106, 36);
-            materialButton1.TabIndex = 6;
-            materialButton1.Text = "Cadastrar";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = false;
-            materialButton1.Click += materialButton1_Click;
+            btnCadastrar.Location = new Point(5, 135);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(192, 31);
+            btnCadastrar.TabIndex = 6;
+            btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += button6_Click;
             // 
             // button5
             // 
-            button5.Location = new Point(5, 99);
+            button5.Location = new Point(5, 92);
             button5.Name = "button5";
             button5.Size = new Size(192, 31);
             button5.TabIndex = 5;
@@ -1024,7 +1013,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -1153,6 +1141,6 @@
         private DataGridView dataGridView1;
         private Button button4;
         private Button button5;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private Button btnCadastrar;
     }
 }
